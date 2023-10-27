@@ -63,5 +63,47 @@ public class StepDefs {
 		driver.close();
 		driver.quit();
 	}
+	
+	///////////// Add Customer /////////////
+	
+	@When("User expands the Customers menu tab and click on Customers from submenus")
+	public void user_expands_the_customers_menu_tab_and_click_on_customers_from_submenus() {
+
+	}
+
+	@Then("User lands on Customers Page")
+	public void user_lands_on_customers_page() {
+
+	}
+
+	@When("User clicks on the Add New button")
+	public void user_clicks_on_the_add_new_button() {
+
+	}
+
+	@Then("User lands on the Create Customer Page")
+	public void user_lands_on_the_create_customer_page() {
+
+	}
+
+	@When("User enters the customers info in the form")
+	public void user_enters_the_customers_info_in_the_form() {
+
+	}
+
+	@When("user Clicks on Save button")
+	public void user_clicks_on_save_button() {
+
+	}
+
+	@Then("User can view the Confirmation Message {string}")
+	public void user_can_view_the_confirmation_message(String string) {
+
+	}
+
+	@Then("user closes the browser")
+	public void user_closes_the_browser() {
+
+	}
 
 }
