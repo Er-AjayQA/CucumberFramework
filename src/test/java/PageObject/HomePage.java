@@ -17,12 +17,38 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[text()=\"Logout\"]")
 	private WebElement logoutButton;
+	
+	@FindBy(xpath = "//a[@href='#']//p[contains(text(),'Customers')]")
+	private WebElement customerMenuButton;
+	
+	@FindBy(xpath = "//a[contains(@href,'/Admin/Customer/List')]//p[contains(text(),'Customers')]")
+	private WebElement customerSubMenuButton;
 
 	public WebElement getLogoutButton() {
 		return logoutButton;
 	}
+	
+	public WebDriver getLdriver() {
+		return ldriver;
+	}
+
+	public WebElement getCustomerMenuButton() {
+		return customerMenuButton;
+	}
+
+	public WebElement getCustomerSubMenuButton() {
+		return customerSubMenuButton;
+	}
+
+
 
 	/* Business Libraries */
+	
+	public void navigateToCustomerPage() {
+		customerMenuButton.click();
+		customerSubMenuButton.click();
+	}
+	
 	public void logoutFromApp() {
 		logoutButton.click();
 	}
