@@ -10,8 +10,9 @@ import io.cucumber.junit.CucumberOptions;
     glue = "StepsDefinition", // specify the package where your step definitions are located
     dryRun = false,
     monochrome = true,
-    plugin = {"pretty", "html:target/cucumber-reports/reportsResult.html"}
+    plugin = {"pretty", "json:target/cucumber-reports/reports_json.json"}
 )
+//plugin = {"pretty", "html:target/cucumber-reports/reportsResult.html"}
 public class Run {
 
 	/* This class will be empty. */
