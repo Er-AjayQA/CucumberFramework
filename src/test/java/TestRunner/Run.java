@@ -5,7 +5,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".//Features/LoginFeature.feature", // specify the path to your feature files
+@CucumberOptions(features = ".//Features/Customers.feature", // specify the path to your feature files
 		glue = "StepsDefinition", // specify the package where your step definitions are located
 		dryRun = false, 
 		monochrome = true, 

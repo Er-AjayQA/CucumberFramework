@@ -3,6 +3,9 @@ package StepsDefinition;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import PageObject.CustomersListPage;
 import PageObject.HomePage;
 import PageObject.LoginPage;
 import io.cucumber.java.en.Then;
@@ -14,6 +17,7 @@ public class StepDefs {
 	public WebDriver driver;
 	public LoginPage loginPg;
 	public HomePage homePg;
+	public CustomersListPage clPg;
 
 	@When("User Will Launch Browser")
 	public void user_will_launch_browser() {
@@ -68,17 +72,20 @@ public class StepDefs {
 	
 	@When("User expands the Customers menu tab and click on Customers from submenus")
 	public void user_expands_the_customers_menu_tab_and_click_on_customers_from_submenus() {
-
+		homePg= new HomePage(driver);
+		homePg.navigateToCustomerPage();
 	}
 
-	@Then("User lands on Customers Page")
-	public void user_lands_on_customers_page() {
-
+	@Then("User lands on Customers Page {string}")
+	public void user_lands_on_customers_page(String expectedCustomerPgTitle) {
+		String actualCustomerPgTitle= driver.getTitle();
+		homePg.validatePageTitle(expectedCustomerPgTitle, actualCustomerPgTitle);
 	}
 
 	@When("User clicks on the Add New button")
 	public void user_clicks_on_the_add_new_button() {
-
+		clPg= new CustomersListPage(driver);
+		clPg.navigateToCreateNewCustomerPage();
 	}
 
 	@Then("User lands on the Create Customer Page")
