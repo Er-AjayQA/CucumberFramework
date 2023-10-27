@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class CustomersListPage {
 
@@ -27,5 +28,9 @@ public class CustomersListPage {
 	
 	public void navigateToCreateNewCustomerPage(){
 		addNewButton.click();
+	}
+	
+	public void validatePageTitle(String expectedTitle, String actualTitle) {
+		Assert.assertEquals(actualTitle, expectedTitle);
 	}
 }

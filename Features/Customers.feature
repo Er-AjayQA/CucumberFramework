@@ -9,7 +9,7 @@ Feature: Customers
     When User expands the Customers menu tab and click on Customers from submenus
     Then User lands on Customers Page "Customers / nopCommerce administration"
     When User clicks on the Add New button
-    Then User lands on the Create Customer Page
+    Then User lands on the Create Customer Page "Add a new customer / nopCommerce administration"
     When User enters the customers info in the form
     And user Clicks on Save button
     Then User can view the Confirmation Message "The new customer has been added successfully."

@@ -2,5 +2,5 @@ package Utilities;
 
 public interface IConstantUtilities {
 
-	String excelFilePath= "";
+	String excelFilePath= ".\\InputData\\InputData.xlsx";
 }
