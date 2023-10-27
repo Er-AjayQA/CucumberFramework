@@ -7,7 +7,7 @@ Feature: Customers
     And User Will Click on Login button
     Then HomePage Title Should be "Dashboard / nopCommerce administration"
     When User expands the Customers menu tab and click on Customers from submenus
-    Then User lands on Customers Page
+    Then User lands on Customers Page "Customers / nopCommerce administration"
     When User clicks on the Add New button
     Then User lands on the Create Customer Page
     When User enters the customers info in the form
